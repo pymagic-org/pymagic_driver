@@ -91,7 +91,7 @@ class BMP180():
         X1 = ((UT-self.cal_AC6) * self.cal_AC5) >> 15
         X2 = (self.cal_MC << 11) / (X1 + self.cal_MD)
         B5 = X1 + X2
-        print('B5 = ',B5)
+        #print('B5 = ',B5)
         temp = (int(B5 + 8) >> 4) / 10.0
         return temp
 
